@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #373740;
+}
+
+main {
+    position: relative;
+    width: 80%;
+    height: 70%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    background-color: #056CF2;
+
+    border-radius: 10px;
+
+    padding: 10px;
+
+    box-shadow: 1px 1px ;
+}
+
+button {
+
+    background-color: #494D59;
+    color: white;
+
+    border-radius: 10px;
+    padding: 10px;
+
+    box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.63);
+
+    font-size: large;
+}
+
+#btnVoltar {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #222129;
+}
