@@ -1,13 +1,20 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'Digital';
+    src: url(DS-DIGI.TTF);
+}
+
 * {
     padding: 0;
     margin: 0;
 
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
     width: 100vw;
     height: 100vh;
 
@@ -29,7 +36,7 @@ main {
     align-items: center;
     gap: 15px;
 
-    background-color: #056CF2;
+    background-color: #0F31F2;
 
     border-radius: 10px;
 
@@ -37,6 +44,64 @@ main {
 
     box-shadow: 1px 1px ;
 }
+
+#visor {
+
+    font-family: 'Digital', sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 5px;
+
+    width: 80%;
+    height: 30%;
+
+    background-image: linear-gradient(to bottom, #3d8df5, #1f53ee);
+
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+#visor-ponto-batido, #visor-descanso {
+    gap: 5px;
+    position: relative;
+}
+
+#visor  img {
+    width: 120px;
+    position: absolute;
+
+    top: calc(35%);
+    left: calc(20%);
+}
+
+#visor-descanso img {
+    width: 150px;
+    position: absolute;
+
+    top: calc(5%);
+    left: calc(15%);
+}
+
+#visor  p {
+    text-align: center;
+}
+
+#visor-ponto-batido p {
+    color: rgb(107, 2, 2);
+}
+
+#visor-descanso p {
+    color: rgb(5, 75, 5);
+}
+
+.hide{
+    display: none;
+}
+
+
+
+
+
 
 button {
 
@@ -56,4 +121,27 @@ button {
     bottom: 10px;
     left: 10px;
     background-color: #222129;
+}
+
+#registros {
+    text-align: center;
+    overflow: auto;
+
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 5px;
+
+    height: 80%;
+
+
+    background-image: linear-gradient(to bottom, #3d8df5, #1f53ee);
+
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+#registros p {
+    background-image: linear-gradient(to bottom, #3d8df5, #1f53ee);
+    margin-bottom: 5px;
+    padding: 5px;
 }
