@@ -27,8 +27,8 @@ body{
 
 main {
     position: relative;
-    width: 80%;
-    height: 70%;
+    width: 85%;
+    height: 85%;
 
     display: flex;
     flex-direction: column;
@@ -40,7 +40,7 @@ main {
 
     border-radius: 10px;
 
-    padding: 10px;
+    padding: 0px 20px 20px;
 
     box-shadow: 1px 1px ;
 }
@@ -67,19 +67,19 @@ main {
 }
 
 #visor  img {
-    width: 120px;
-    position: absolute;
-
-    top: calc(35%);
-    left: calc(20%);
-}
-
-#visor-descanso img {
     width: 150px;
     position: absolute;
 
-    top: calc(5%);
-    left: calc(15%);
+    top: calc(35%);
+    left: calc(10%);
+}
+
+#visor-descanso img {
+    width: 190px;
+    position: absolute;
+
+    top: calc(0%);
+    left: calc(5%);
 }
 
 #visor  p {
@@ -131,7 +131,8 @@ button {
     font-weight: bolder;
     padding: 5px;
 
-    height: 80%;
+    height: 65%;
+    width: 100%;
 
 
     background-image: linear-gradient(to bottom, #3d8df5, #1f53ee);
@@ -144,4 +145,57 @@ button {
     background-image: linear-gradient(to bottom, #3d8df5, #1f53ee);
     margin-bottom: 5px;
     padding: 5px;
+}
+
+#resumo {
+    background-color: #1f53ee;
+    color: white;
+    font-size: 20px;
+
+    padding: 5px;
+
+    text-align: center;
+    border-radius: 10px;
+
+    box-shadow: 1px 1px 10px 5px  rgba(0, 0, 0, 0.658);
+}
+
+/* Página de lançamentos manuais */
+
+.containerEntradaExistente {
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 1px 1px 10px 5px  rgba(0, 0, 0, 0.658);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+#inputParaConsulta {
+    font-size: 20px;
+    color: white;
+
+}
+
+#idDoRegistro {
+    
+    width: 20%;
+    height: 40px;
+    font-size: 20px;
+
+    padding: 5px;
+}
+
+#registroCarregado {
+    border-radius: 10px;
+    text-align: center;
+    background-color: #032a5e;
+    padding: 10px;
+}
+
+.containerEntradaExistente button {
+    margin: 10px;
 }

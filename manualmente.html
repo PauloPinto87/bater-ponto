@@ -18,15 +18,16 @@
 
     </header>
     <main>
-        <button id="btnEntrada" onclick="entrada()">
-            <i class="fa-solid fa-right-to-bracket"></i>
-            Bater ponto entrada
-        </button >
-        <button id="btnSaida" onclick="saida()">
-            <i class="fa-solid fa-stopwatch"></i>
-            Bater ponto saída
-        </button>
+        <section class="containerEntradaExistente">
+            <h2>Editar uma entrada existente</h2>
+            <div id="inputParaConsulta">
+                <label for="id">ID do registro</label>
+                <input type="number" name="" id="idDoRegistro">
+                <button onclick="consultar()">Visualizar</button>
+                <div id="registroCarregado" class="hide"></div>
+            </div>
 
+        </section>
         <a href="index.html">
             <button id="btnVoltar">
                 <i class="fa-solid fa-backward"></i>
@@ -35,9 +36,8 @@
         </a>
     </main>
     <footer>
-
     </footer>
     
-    <script src="script.js"></script>
+    <script src="manualmente.js"></script>
 </body>
 </html>
