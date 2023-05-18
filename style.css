@@ -123,6 +123,25 @@ button {
     background-color: #222129;
 }
 
+#btnExport {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #222129;
+    padding: 5px;
+    font-size: 15px;
+
+}
+
+#btnImport {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #222129;
+    padding: 5px;
+    font-size: 15px;
+}
+
 #registros {
     text-align: center;
     overflow: auto;
