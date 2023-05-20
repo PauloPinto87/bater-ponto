@@ -48,24 +48,26 @@ function saida() {
         //Guarda o momento da saida no localStorage como uma string no formato ISO
         let momentoSaida = new Date()
         localStorage.setItem('momentoSaida', momentoSaida.toISOString())
+
+        let entradaString = localStorage.getItem('momentoEntrada')
+        let saidaString = localStorage.getItem('momentoSaida')
+        let momentoEntrada = new Date(Date.parse(entradaString))
+        let momentoSaida = new Date(Date.parse(saidaString))
+    
+        let diff = momentoSaida.getTime() - momentoEntrada.getTime()
+    
+    
+        let segundos = Math.round(diff / 1000) % 60
+        let minutos = Math.floor(diff / 1000 / 60) % 60
+        let horas = Math.floor(diff / 1000 / 60 / 60)
+    
+        console.log(`Em milesegundos é: ${diff}`)
+        console.log(`A diferença é de ${horas} horas, ${minutos} minutos e ${segundos} segundos.`);
+    
+        let idUltRegEnt = localStorage.length-2
+    
+        localStorage.setItem(idUltRegEnt, `${momentoEntrada.getDate()}/${momentoEntrada.getMonth()} - ${horas}h:${minutos}m:${segundos}s`)
     }
 
-    let entradaString = localStorage.getItem('momentoEntrada')
-    let saidaString = localStorage.getItem('momentoSaida')
-    let momentoEntrada = new Date(Date.parse(entradaString))
-    let momentoSaida = new Date(Date.parse(saidaString))
 
-    let diff = momentoSaida.getTime() - momentoEntrada.getTime()
-
-
-    let segundos = Math.round(diff / 1000) % 60
-    let minutos = Math.floor(diff / 1000 / 60) % 60
-    let horas = Math.floor(diff / 1000 / 60 / 60)
-
-    console.log(`Em milesegundos é: ${diff}`)
-    console.log(`A diferença é de ${horas} horas, ${minutos} minutos e ${segundos} segundos.`);
-
-    let idUltRegEnt = localStorage.length-2
-
-    localStorage.setItem(idUltRegEnt, `${momentoEntrada.getDate()}/${momentoEntrada.getMonth()} - ${horas}h:${minutos}m:${segundos}s`)
 }
