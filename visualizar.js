@@ -51,3 +51,25 @@ for (index = 0; index <= registros.childNodes.length-2; index++) {
 let resumoDiv = document.getElementById('resumo')
 
 resumoDiv.innerHTML = `Total de ${somaHoras} horas, ${somaMinutos} minutos e ${somaSegundos}segundos.`
+
+
+function exportarHorarios() {
+    //Cria o  link para o download
+    registros = document.getElementById('registros').textContent
+    var elementoLink = document.createElement('a')
+
+    console.log(registros)
+
+    elementoLink.setAttribute('href', 'data:text/plain;charset=utf-8' + encodeURIComponent(registros))
+
+    elementoLink.setAttribute('download', 'registrosPonto.txt')
+
+    elementoLink.style.display = 'none'
+
+    document.body.appendChild(elementoLink)
+
+    elementoLink.click()
+
+    document.body.removeChild(elementoLink)
+
+}
