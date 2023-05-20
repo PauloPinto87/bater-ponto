@@ -3,11 +3,6 @@ const visorDescanso = document.getElementById('visor-descanso')
 let idUltRegEnt = localStorage.length-2
 
 
-
-
-
-
-
 if (localStorage.getItem('Working') == null) {
     localStorage.setItem('Working', false)
     visorPontoBatido.classList.toggle('hide')
@@ -46,7 +41,7 @@ function saida() {
         visorDescanso.classList.toggle('hide')
 
         //Guarda o momento da saida no localStorage como uma string no formato ISO
-        let momentoSaida = new Date()
+        momentoSaida = new Date()
         localStorage.setItem('momentoSaida', momentoSaida.toISOString())
 
         let entradaString = localStorage.getItem('momentoEntrada')
